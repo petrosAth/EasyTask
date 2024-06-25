@@ -6,7 +6,7 @@ import { NewTaskComponent } from './new-task/new-task.component';
   standalone: true,
   imports: [TaskComponent, NewTaskComponent],
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+  styleUrl: './tasks.component.css',
 })
 export class TasksComponent {
   @Input({ required: true }) userId!: string;
@@ -37,7 +37,7 @@ export class TasksComponent {
         'Prepare and describe an issue template which will help with project management',
       dueDate: '2024-06-15',
     },
-  ]
+  ];
 
   get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
